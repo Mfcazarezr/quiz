@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, UrlSerializer } from 'ionic-angular';
 import {Storage} from '@ionic/storage'
+import { RegistroPage } from '../registro/registro';
 
 
 @Component({
@@ -12,6 +13,7 @@ export class HomePage {
   password="";
   data=[];
   datos="";
+  resgistro=RegistroPage;
  
 
   constructor(public navCtrl: NavController, public alertCtrl:AlertController,public storage:Storage) {

@@ -21,5 +21,18 @@ export class RegistroPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistroPage');
   }
+  inicio(){
+    console.log(this.usuario.email + " " + this.usuario.pass);
+    if(this.usuario.email!=null&&this.usuario.pass!=null){
+      this.navCtrl.push(this.home,this.usuario);
+    }else{
+      const alert = this.alertCtrl.create({
+        title: 'Error',
+        subTitle: 'Te faltan parametros',
+        buttons: ['OK']
+      });
+      alert.present();
+    }
+  }
 
 }
